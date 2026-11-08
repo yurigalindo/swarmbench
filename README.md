@@ -15,22 +15,23 @@ In July 2026 about 1,200 AI agents that were meant to be isolated turned a share
 
 ## Results
 
-Main test: 44 swarm teams on 15 test days (days 6, 8, 9 of LANL 2015 × 5 random seeds), none used for design or tuning. "Teams caught" means at least one machine of the team is among the day's top N alerts; N is per 10,000 monitored machines per day, and 10 alerts/day is roughly what one analyst can check. Brackets are 95% hierarchical-bootstrap confidence intervals (CIs). The per-machine baseline is slow, so it was run on a 26-team subset (seeds 0-2).
+Main test: 44 swarm teams on 15 test days (days 6, 8, 9 of LANL 2015 × 5 random seeds), none used for design or tuning. "Teams caught" means at least one machine of the team is among the day's top N alerts; N is per 10,000 monitored machines per day, and 10 alerts/day is roughly what one analyst can check. Brackets are 95% hierarchical-bootstrap confidence intervals (CIs). The 26-team subset (seeds 0-2) is shown for comparison with earlier runs.
 
 | Method | Teams caught, 10 alerts/day (44 teams) | Same, 26-team subset |
 |---|---|---|
 | Convergence rule | **25%** [11%, 40%] | 22% [7%, 41%] |
 | SwarmScore (convergence + first-time accounts) | **32%** [16%, 51%] | 38% [18%, 62%] |
-| Per-machine Poisson matrix factorisation (PMF) | not run | 0.6% [0%, 1%] |
+| Per-machine Poisson matrix factorisation (PMF) | 0.8% [0.2%, 1.5%] | 0.6% [0%, 1%] |
 | First-time accounts alone | 0% | 0% |
-| *Paired difference:* convergence − PMF | | **+0.22** [+0.08, +0.40], significant |
-| *Paired difference:* SwarmScore − PMF | | **+0.38** [+0.17, +0.61], significant |
+| *Paired difference:* convergence − PMF | **+0.24** [+0.11, +0.39], significant | **+0.22** [+0.08, +0.40], significant |
+| *Paired difference:* SwarmScore − PMF | **+0.31** [+0.15, +0.48], significant | **+0.38** [+0.17, +0.61], significant |
 | *Paired difference:* SwarmScore − convergence | +0.07 [−0.11, +0.25], not significant | |
 
 | Alert budget (44 teams) | 5/day | 10/day | 20/day | 50/day |
 |---|---|---|---|---|
 | Convergence rule | 9% [2%, 18%] | 25% [12%, 40%] | 41% [26%, 57%] | 66% [48%, 83%] |
 | SwarmScore | 18% [5%, 34%] | 32% [15%, 50%] | 41% [23%, 61%] | 52% [33%, 73%] |
+| PMF (per-machine) | 0.5% [0.0%, 1.2%] | 0.8% [0.2%, 1.5%] | 2.2% [0.9%, 3.7%] | 5.8% [3.7%, 8.0%] |
 
 | Window-level ranking, days 6 / 8 / 9 | AUROC | Recall at 1% FPR |
 |---|---|---|
@@ -99,7 +100,7 @@ The swarm template in this repository holds aggregate statistics only. The bench
 
 - LANL 2015 records human workstations and servers, not an AI-agent fleet; the detector has not been run on a live AI-lab network.
 - The pre-swarm reference is a best case: it holds no swarm activity and ends exactly when the swarm starts.
-- The deliberately easy positive control (a very obvious swarm) was not met with a rolling reference and has not been re-run with a pre-swarm reference.
+- The deliberately easy positive controls (a very obvious swarm) still fail their fixed bar (recall at 1% FPR ≥ 0.50 *and* ≥ 80% of teams caught at 10 alerts/day, by one detector). With a pre-swarm reference, recall rises sharply (convergence rule 0.023 → 0.350; onset control 0.169 → 0.531), but at most 0.545 of teams are caught at 10 alerts/day, on only 11 teams per control (wide CIs). The benchmark's sensitivity at strict alert budgets is therefore not yet certified.
 - Normal events such as software rollouts also make groups of machines adopt new services together; expect them to be the main source of false alarms. Allow-list known rollouts and start in shadow mode.
 
 ## Licence
