@@ -1,0 +1,10 @@
+NOTES_PROVENANCE.md
+__pycache__/
+*.pyc
+data/
+out/
+*.parquet
+*.csv
+*.csv.gz
+*.txt.gz
+.venv/
