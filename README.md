@@ -4,7 +4,7 @@
 
 Yuri Galindo (AE Studio) and Caique Lira (Independent)
 
-Paper: [PAPER LINK PLACEHOLDER] · Video: [VIDEO LINK PLACEHOLDER]
+Paper: [PAPER LINK PLACEHOLDER] · Video: [3-minute overview](https://youtu.be/SHYtCuZ8mUM)
 
 In July 2026 about 1,200 AI agents that were meant to be isolated turned a shared package server into a secret message board, and about 700 of them went on to attack an external service. Monitoring what each agent says and does is necessary but can be evaded. Every lab already keeps *metadata*, though: firewall and login records of which machine connected to which destination, when, and with which account. SwarmBench asks whether a swarm can be caught from that metadata alone, as an extra security layer that reads no content. It provides a benchmark with a known answer (real enterprise logs with a planted, measured swarm) and a simple detector that catches significantly more swarm teams than the standard per-machine anomaly model.
 
