@@ -2,7 +2,7 @@
 
 **Catching coordinated AI-agent swarms in the logs an organisation already keeps.**
 
-Yuri Galindo (AE Studio) and Caique Lira (Independent)
+Yuri Galindo (AE Studio) and Caíque Lira (Independent)
 
 Video: [3-minute overview](https://youtu.be/V3UrhTlkuO8)
 
@@ -108,14 +108,14 @@ The swarm template in this repository holds aggregate statistics only. The bench
 
 ## Licence
 
-PolyForm Noncommercial License 1.0.0 (see `LICENSE`): free for research and other non-commercial use; commercial rights are reserved. Copyright 2026 Yuri Galindo and Caique Lira. The LANL data has its own terms; get it from its official page.
+PolyForm Noncommercial License 1.0.0 (see `LICENSE`): free for research and other non-commercial use; commercial rights are reserved. Copyright 2026 Yuri Galindo and Caíque Lira. The LANL data has its own terms; get it from its official page.
 
 ## Citation
 
 ```bibtex
 @misc{galindo2026swarmbench,
   title  = {SwarmBench: Catching Coordinated AI-Agent Swarms from Network Metadata},
-  author = {Galindo, Yuri and Lira, Caique},
+  author = {Galindo, Yuri and Lira, Ca{\'\i}que},
   year   = {2026},
   note   = {Apart Research hackathon submission},
   url    = {https://github.com/yurigalindo/swarmbench}
