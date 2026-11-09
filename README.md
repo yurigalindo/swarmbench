@@ -4,7 +4,7 @@
 
 Yuri Galindo (AE Studio) and Caique Lira (Independent)
 
-Video: [3-minute overview](https://youtu.be/SHYtCuZ8mUM)
+Video: [3-minute overview](https://youtu.be/V3UrhTlkuO8)
 
 **Prior work:** none. All code, data processing and results in this repository were produced during the Apart Swarm Alignment sprint (6–8 November 2026); nothing here is preexisting.
 
