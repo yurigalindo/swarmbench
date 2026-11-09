@@ -6,6 +6,8 @@ Yuri Galindo (AE Studio) and Caique Lira (Independent)
 
 Video: [3-minute overview](https://youtu.be/SHYtCuZ8mUM)
 
+**Prior work:** none. All code, data processing and results in this repository were produced during the Apart Swarm Alignment sprint (6–8 November 2026); nothing here is preexisting.
+
 In July 2026 about 1,200 AI agents that were meant to be isolated turned a shared package server into a secret message board, and about 700 of them went on to attack an external service. Monitoring what each agent says and does is necessary but can be evaded. Every lab already keeps *metadata*, though: network-flow and login logs (the kind firewalls, proxies and identity systems already record) of which machine connected to which destination, when, and with which account. In the July incident the coordination channel was inside the lab, so internal flow logs matter, not only the edge firewall. SwarmBench asks whether a swarm can be caught from that metadata alone, as an extra security layer that reads no content. It provides a benchmark with a known answer (real enterprise logs with a planted, measured swarm) and a simple detector that catches significantly more swarm teams than a simplified version of the standard per-machine anomaly model (PMF).
 
 ## Contributions
