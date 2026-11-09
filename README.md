@@ -114,7 +114,7 @@ PolyForm Noncommercial License 1.0.0 (see `LICENSE`): free for research and othe
 
 ```bibtex
 @misc{galindo2026swarmbench,
-  title  = {SwarmBench: Catching Coordinated AI-Agent Swarms in the Logs a Lab Already Keeps},
+  title  = {SwarmBench: Catching Coordinated AI-Agent Swarms from Network Metadata},
   author = {Galindo, Yuri and Lira, Caique},
   year   = {2026},
   note   = {Apart Research hackathon submission},
